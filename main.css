@@ -1,0 +1,43 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	height: 75%;
+	width: 75%;
+	margin: auto;
+	font-size: 30px;
+}
+
+.header h1 {
+	margin: auto;
+	text-align: center;
+	color: red;
+	font-family: 'Lobster', cursive;
+	font-size: 60px;
+	margin-bottom: 3em;
+}
+
+.options {
+	height: 9em;
+	background-color: #ffe6e6;
+
+}
+
+select#left {
+	margin-left: 28px;
+}	
+
+select#right {
+	margin: left: 28px;
+}
+.search-button {
+	display: block;
+	margin: auto;
+}
