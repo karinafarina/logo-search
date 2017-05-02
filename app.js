@@ -16,7 +16,7 @@ var logos = [
 	{
 	 	name: "afe",
 	 	fadeUrl: "/logo-search/img/afeFade.png",
-	 	colorUrl: "/logo-search/img/AFEcolor.png",
+	 	colorUrl: "/logo-search/img/afeColor.png",
 	 	program: 'Scholarship Program',
 	 	education: 'Highschool',
 	},
