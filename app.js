@@ -1,47 +1,46 @@
-var logos = {
-	aciFade: {
-		url: "/logo-search/img/aci.png",
-		program: 'scholarship',
+var logos = [
+	{
+		name: "aci",
+		fadeUrl: "/logo-search/img/aci.png",
+		colorUrl: "/logo-search/img/aciColor.png",
+		program: 'Scholarship Program',
 		education: 'K-8',
 	},
-	aciColor: {
-	 	url: "/logo-search/img/aciColor.png",
+	{
+		name: "acm",
+	 	fadeUrl: "/logo-search/img/amcFade.png",
+	 	colorUrl: "/logo-search/img/acmColor.png",
+	 	program: 'Loan Program',
+	 	education: 'Highschool',
 	},
-	acmFade: {
-	 	url: "/logo-search/img/amcFade.png",
-	 	program: 'loan',
+	{
+	 	name: "afe",
+	 	fadeUrl: "/logo-search/img/afeFade.png",
+	 	colorUrl: "/logo-search/img/afeColor.png",
+	 	program: 'Scholarship Program',
 	 	education: 'Highschool',
-	 },
-	 acmColor: {
-	 	url: "/logo-search/img/acmColor.png",
-	 },
-	afeFade: {
-	 	url: "/logo-search/img/afeFade.png",
-	 	program: 'scholarship',
-	 	education: 'Highschool',
-	 },
-	afeColor: {
-	 	url: "/logo-search/img/afeColor.png",
-	 }
-}
-function checkSelections(logos, src) {
-	var i;
-	for(i in logos) {
-		if(logos.hasOwnProperty(i)) {
-			console.log(logos[i]);
-		}
-	}
-}
+	},
+	
+]
+
 
 $(document).ready(function() {
 	$(".search-button").on('click', function(event) {
 		event.preventDefault();
-		if($("#program-type").val() == null && $("#education-level").val() == null) {
-			$(".aci").attr("src", logos.aciColor.url);
-			console.log($(".aci"))
-			$(".acm").attr("src", logos.acmColor.url);
-			$(".afe").attr("src", logos.afeColor.url);
+		for(var i = 0;i< logos.length; i++) {
+			var currentLogo = logos[i];
+			var currentProgram = currentLogo.program;
+			var currentEducation = currentLogo.education;
+			console.log($("#program-type").val(), $("#education-level").val(), currentEducation );
+			if($("#program-type").val() == currentProgram || $("#education-level").val() == currentEducation) {
+				console.log("matched");
+				$("." + currentLogo.name).attr("src", currentLogo.colorUrl);
+				console.log(currentLogo.colorUrl);
+			}
+			if($("#program-type").val() == null && $("#education-level").val() == null) {
+				$('.' + currentLogo.name).attr('src', currentLogo.colorUrl);
+			}
 		}
-		checkSelections(logos, $(".acm").attr("src", logos.acmColor.url))
+				
 	})
 });

@@ -9,10 +9,11 @@ body {
 }
 
 .container {
-	height: 75%;
+	
 	width: 75%;
 	margin: auto;
 	font-size: 30px;
+	
 }
 
 .header h1 {
@@ -20,23 +21,20 @@ body {
 	text-align: center;
 	color: red;
 	font-family: 'Lobster', cursive;
-	font-size: 60px;
+	font-size: 2em;
 	margin-bottom: 3em;
 }
 
 .options {
-	height: 9em;
+	height: 6em;
 	background-color: #ffe6e6;
 
 }
 
-select#left {
-	margin-left: 28px;
-}	
-
-select#right {
-	margin: left: 28px;
+.row {
+	margin-top: 2em;
 }
+
 .search-button {
 	display: block;
 	margin: auto;
